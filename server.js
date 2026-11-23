@@ -105,7 +105,7 @@ function vCust(b) {
 const ymd = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
 function nextDelivery() {
   const d = new Date(); d.setHours(9, 0, 0, 0);
-  do { d.setDate(d.getDate() + 1); } while (d.getDay() !== 4);
+  do { d.setDate(d.getDate() + 1); } while (d.getDay() !== 5);
   if (d - new Date() < 172800000) d.setDate(d.getDate() + 7);
   return ymd(d);
 }
